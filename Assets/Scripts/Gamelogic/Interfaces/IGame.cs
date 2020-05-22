@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Interfaces
+namespace Assets.Scripts.Gamelogic.Interfaces
 {
-    interface IUnitFactory
+    interface IGame
     {
-        IUnit CreateUnit(int maxPrice);
+        void Turn();
+        void TurnToEnd();
     }
 }

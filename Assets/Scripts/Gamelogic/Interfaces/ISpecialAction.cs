@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Interfaces
+namespace Assets.Scripts.Gamelogic.Interfaces
 {
     public interface ISpecialAction
     {
-        public int SpecialActionStrength { get; set; }
-        public void DoSpecialAction();
+        int SpecialActionStrength { get; set; }
+        void DoSpecialAction();
     }
 }
