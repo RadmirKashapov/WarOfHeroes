@@ -7,30 +7,32 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts.Gamelogic.Units
 {
-    class Healer : IUnit, ICloneable
+    class Infantry : IUnit, ICloneable
     {
         public int Cost { get; }
+
         public int Hp { get; set; }
         public int Ad { get; set; }
         public int Df { get; set; }
 
-        public Healer(int cost, int hp, int ad, int df)
+        public Infantry(int cost, int hp, int ad, int df)
         {
-            this.Cost = Cost;
-            this.Hp = Hp;
-            this.Ad = Ad;
-            this.Df = Df;
+            this.Cost = cost;
+            this.Hp = hp;
+            this.Ad = ad;
+            this.Df = df;
         }
-        public Healer(Healer healer)
+
+        public Infantry(Infantry infantry)
         {
-            this.Cost = healer.Cost;
-            this.Hp = healer.Hp;
-            this.Ad = healer.Ad;
-            this.Df = healer.Df;
+            this.Cost = infantry.Cost;
+            this.Hp = infantry.Hp;
+            this.Ad = infantry.Ad;
+            this.Df = infantry.Df;
         }
         public object Clone()
         {
-            return new Healer(this);
+            return new Infantry(this);
         }
 
         public void TakeDamage(int ad)

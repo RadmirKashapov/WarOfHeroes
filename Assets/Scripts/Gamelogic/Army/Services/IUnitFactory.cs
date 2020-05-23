@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts.Gamelogic.Interfaces
 {
-    interface IArmy
+    public interface IUnitFactory
     {
+        IUnit CreateUnit(int maxPrice);
     }
 }

@@ -7,32 +7,31 @@ using System.Threading.Tasks;
 
 namespace Assets.Scripts.Gamelogic.Units
 {
-    class Infantry : IUnit, ICloneable
+    class Archer : IUnit, ICloneable
     {
         public int Cost { get; }
-
         public int Hp { get; set; }
         public int Ad { get; set; }
         public int Df { get; set; }
 
-        public Infantry(int cost, int hp, int ad, int df)
+        public Archer(int cost, int hp, int ad, int df)
         {
-            this.Cost = Cost;
-            this.Hp = Hp;
-            this.Ad = Ad;
-            this.Df = Df;
+            this.Cost = cost;
+            this.Hp = hp;
+            this.Ad = ad;
+            this.Df = df;
         }
 
-        public Infantry(Infantry infantry)
+        public Archer(Archer archer)
         {
-            this.Cost = infantry.Cost;
-            this.Hp = infantry.Hp;
-            this.Ad = infantry.Ad;
-            this.Df = infantry.Df;
+            this.Cost = archer.Cost;
+            this.Hp = archer.Hp;
+            this.Ad = archer.Ad;
+            this.Df = archer.Df;
         }
         public object Clone()
         {
-            return new Infantry(this);
+            return new Archer(this);
         }
 
         public void TakeDamage(int ad)

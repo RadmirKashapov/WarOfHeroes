@@ -17,10 +17,10 @@ namespace Assets.Scripts.Gamelogic.Units
 
         public Knight(int cost, int hp, int ad, int df)
         {
-            this.Cost = Cost;
-            this.Hp = Hp;
-            this.Ad = Ad;
-            this.Df = Df;
+            this.Cost = cost;
+            this.Hp = hp;
+            this.Ad = ad;
+            this.Df = df;
         }
         public Knight(Knight knight)
         {

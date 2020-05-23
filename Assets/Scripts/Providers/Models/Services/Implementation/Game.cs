@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Gamelogic.Interfaces
+namespace Assets.Scripts.Providers.Models
 {
-    interface IUnitFactory
+    class Game
     {
-        IUnit CreateUnit(int maxPrice);
     }
 }
